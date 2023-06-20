@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+singup
+{% endblock %}
+
+{% block content %}
+
+<h1 class='ms-5 mt-3 text-center  '>Singup </h1>
+<div class='mt-5 ms-5 text-center bg-light p-5'>
+     
+<form action='' method ='POST'>
+
+    {% csrf_token %} 
+
+    <label>First Name  </label> 
+    <input type='text'placeholder='name' />  <br> <br>
+
+    <label> User Name  </label> 
+    <input type='text'placeholder='username' name='username' />  <br> <br>
+    
+    <label> Email  </label>
+    <input type='email'placeholder='email' name='email' /><br> <br>
+
+    <label> Password  </label>
+    <input type='text'placeholder='Password' name='Password' /> <br> <br>
+
+    <label>conform Password </label>
+    <input type='text'placeholder='conform Password' name='conformPassword' /><br> <br>
+   <button type="submit" class="btn btn-primary">Singup</button>
+   <a href ='#'>i have already an account </a>
+
+</form>
+</div>
+{% endblock %}
