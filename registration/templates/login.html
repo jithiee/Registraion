@@ -5,18 +5,20 @@ login
 {% endblock %}
 
 {% block content %}
-<h1 class='ms-5 mt-3 text-center  '>Login </h1>
+<h1 class='ms-5 mt-3 text-center  '>Login Here</h1>
 <div class='mt-5 ms-5 text-center bg-light p-5'>
-<form> 
+<form action='' method='POST' > 
+    {% csrf_token %}
 
     <label> User Name  </label> 
-    <input type='text'placeholder='username' />  <br> <br>
+    <input type='text'placeholder='username' name='username' />  <br> <br>
 
     <label> Password  </label>
-    <input type='text'placeholder='Password' /> <br> <br>
+    <input type='text'placeholder='Password' name='Pass' /> <br> <br>
 
-    <a  href=''> <button type="button" class="btn btn-primary">Login</button> </a>
-   <p>Create an account  <a  href=''>singup  </a></p>
+    <button type="submit" class="btn btn-primary">Login</button>  <br>
+
+        <a  href=''>Create an account  </a>
 
 </form>
 </div>
